@@ -34,8 +34,8 @@ var Module = typeof Module !== 'undefined' ? Module : {};
       } else {
         throw 'using preloaded data can only be done on a web page or in a web worker';
       }
-      var PACKAGE_NAME = '2048.data';
-      var REMOTE_PACKAGE_BASE = '2048.data';
+      var PACKAGE_NAME = 'index.data';
+      var REMOTE_PACKAGE_BASE = 'index.data';
       if (typeof Module['locateFilePackage'] === 'function' && !Module['locateFile']) {
         Module['locateFile'] = Module['locateFilePackage'];
         err('warning: you defined Module.locateFilePackage, that has been renamed to Module.locateFile (using your locateFilePackage for now)');
@@ -163,10 +163,10 @@ var Module = typeof Module !== 'undefined' ? Module : {};
             for (var i = 0; i < files.length; ++i) {
               DataRequest.prototype.requests[files[i].filename].onload();
             }
-                Module['removeRunDependency']('datafile_2048.data');
+                Module['removeRunDependency']('datafile_index.data');
 
       };
-      Module['addRunDependency']('datafile_2048.data');
+      Module['addRunDependency']('datafile_index.data');
     
       if (!Module.preloadResults) Module.preloadResults = {};
     
@@ -187,7 +187,7 @@ var Module = typeof Module !== 'undefined' ? Module : {};
     }
   
    }
-   loadPackage({"files": [{"filename": "/resources/pixel_numbers_white.png", "start": 0, "end": 207, "audio": 0}, {"filename": "/resources/2048_texture.png", "start": 207, "end": 403, "audio": 0}], "remote_package_size": 403, "package_uuid": "891ad2b9-5244-41b2-afe9-bd401ecee104"});
+   loadPackage({"files": [{"filename": "/resources/pixel_numbers_white.png", "start": 0, "end": 207, "audio": 0}, {"filename": "/resources/2048_texture.png", "start": 207, "end": 403, "audio": 0}], "remote_package_size": 403, "package_uuid": "75c4c079-3aed-48c4-b8aa-30a2b398c8b9"});
   
   })();
   
@@ -1698,7 +1698,7 @@ function createExportWrapper(name, fixedasm) {
   };
 }
 
-var wasmBinaryFile = '2048.wasm';
+var wasmBinaryFile = 'index.wasm';
 if (!isDataURI(wasmBinaryFile)) {
   wasmBinaryFile = locateFile(wasmBinaryFile);
 }
