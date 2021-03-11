@@ -32,6 +32,28 @@
 			80%  { transform: scale(1.07) translate(-.5px, -.5px)	rotate(.5deg); }
 			100% { transform: scale(1.07) translate(.5px, -1px)	rotate(-.5deg); }
 		}
+		@font-face {
+			font-family: "pixelttf";
+			src: url("resources/pixel_font.ttf");
+		}
+		@font-face {
+			font-family: "magicttf";
+			src: url("resources/magic_font.ttf");
+		}
+
+		.rtext {
+			font-family: "pixelttf";
+			font-size: large;
+		}
+
+		.mtext {
+			color: aqua;
+			font-family: "magicttf";
+			font-size: large;
+			background: -webkit-linear-gradient(#eee, #333);
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
 	</style>
 	<head>
 		<meta charset="utf-8">
@@ -39,6 +61,8 @@
 	</head>
 	<body>
 	<!-- <img style="border-radius: 50%" src="resources/41839667.gif" alt="Avatar" width=40px> -->
+
+	<div class="rtext" >Here are a few of those interactive <span class="mtext">magical</span> things I made:</div>
 
 	<ul id="hlist">
 		<li><a href="2048"		style="text-decoration:none;"><img class="cicon" src="resources/2048_icon.png"></a></li>
