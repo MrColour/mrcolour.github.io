@@ -1,5 +1,10 @@
+html {
+	--bg: rgb(43, 43, 43);
+	--fg: rgb(83, 219, 203);
+}
+
 body {
-	background-color:rgb(43, 43, 43)
+	background-color: var(--bg)
 }
 ul#hlist li {
 	display: inline-block;
@@ -11,8 +16,8 @@ ul#hlist li {
 	width:	84px;
 	height:	84px;
 	border-radius: 18px;
-	border: 5px solid rgb(51, 204, 234);
-	box-shadow: 5px 7px 0px 0 rgb(0, 0, 0);
+	border: 5px solid var(--fg);
+	box-shadow: 5px 7px 5px 0 rgba(0, 0, 0, 0.702);
 }
 .cicon:hover
 {
@@ -37,7 +42,7 @@ ul#hlist li {
 }
 
 .rtext {
-	color: rgb(83, 219, 203);
+	color: var(--fg);
 	font-family: "pixelttf";
 	font-size: large;
 	text-shadow: 0 0 20px rgba(255, 255, 255, 0.429)
@@ -46,7 +51,7 @@ ul#hlist li {
 .mtext {
 	font-family: "magicttf";
 	font-size: large;
-	background: -webkit-linear-gradient(rgb(133, 0, 249), rgb(0, 255, 217));
+	background: linear-gradient(rgb(133, 0, 249), rgb(0, 255, 217));
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
 	text-shadow: 0 0 7px rgba(69, 215, 255, 0.387)
