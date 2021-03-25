@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="../index.css">
+		<link rel="stylesheet" href="../bs_theme.css">
+
+        <link rel="shortcut icon" href="../resources/Capture.PNG" type="image/x-icon">  
+        <title>I'm a Programer!</title>
+    </head>
+
+    <body>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar-expand navbar-dark bg-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link"        href="../">Home</a></li>
+                <li class="nav-item"><a class="nav-link"        href="#">About_Me</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Resume</a></li>
+                <li class="nav-item"><a class="nav-link"        href="#">Contact</a></li>
+            </ul>
+        </nav>
+    
+    <div class="fluid-container site" id="site">
+
+        <img src="../resources/sign.webp" class="img-fluid" style="width: 10vw; text-align: center; margin-left:45%">
+        <hr>
+        <h1 style="margin-top: 8px;">Player Attributes:</h1>
+        <hr>
+        <br>
+        <iframe id="pdfviewer" src="http://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/MrColour/mrcolour.github.io/8eb03d0fdefded05903238a39802c750b788cf6f/resume/code.pdf&amp;embedded=true" frameborder="0" scrolling="yes" seamless="seamless" style="display: block; width:80%; height:80vh; margin: auto;"></iframe>
+        <br>
+        <hr>
+        <br>
+        
+        <div class="row" style="width: 90vw; text-align: center; margin: auto;">
+            <div>
+                <button type="button" class="btn btn-secondary" onclick="setURL('regu')" >Light</button>
+                <button type="button" class="btn btn-secondary" onclick="setURL('dark')" >Dark</button>
+                <button type="button" class="btn btn-secondary" onclick="setURL('code')" >Code</button>
+            </div>
+        </div>
+        
+        <br>
+        <hr>
+        <img src="../resources/sign.webp" class="img-fluid" style="width: 10vw; text-align: center; margin-left:45%; transform: scaleY(-1);">
+
+        <p style="text-align: right; font-size: small;">This website was brought into existence by me.</p>
+        <p class="super-title" style="text-align: right; font-size: small;">sudo make website</p>
+
+    </body>
+
+    <script>
+        function setURL(url){
+            document.getElementById('pdfviewer').src = "http://docs.google.com/gview?embedded=true&url=https://raw.githubusercontent.com/MrColour/mrcolour.github.io/8eb03d0fdefded05903238a39802c750b788cf6f/resume/" + url + ".pdf&amp;embedded=true";
+        }
+    </script>
+
+</html>
