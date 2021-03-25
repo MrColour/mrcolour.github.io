@@ -8,7 +8,7 @@
 body {
     font-family: "pixelttf";
     color: var(--main-text);
-    font-size: clamp(12px, 2.5vw, 18px);
+    font-size: clamp(20px, 24vw, 15px);
     background-color: var(--mainc);
 }
 
