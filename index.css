@@ -57,6 +57,7 @@ hr {
     margin-bottom: 10px;
     border-radius: 20px;
     border-color: rgba(39, 211, 174, 0.473);
+    /* border-color: #85fff5; */
     padding: 0px 40px 0px 0px;
 }
 
@@ -66,4 +67,8 @@ hr {
 
 .gc-button {
     position: absolute; bottom: 15px; right: 15px;
+}
+
+.useri {
+    font-family: Arial, Helvetica, sans-serif !important;
 }
