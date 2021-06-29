@@ -27,7 +27,7 @@
           <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
           <li class="nav-item"><a class="nav-link"        href="#">About_Me</a></li>
           <li class="nav-item"><a class="nav-link"        href="/resume">Resume</a></li>
-          <li class="nav-item"><a class="nav-link"        href="#">Contact</a></li>
+          <li class="nav-item"><a class="nav-link"        href="/contact">Contact</a></li>
         </ul>
     </nav>
     
@@ -36,7 +36,7 @@
       <!-- SlideShow of Projects -->
       <br>
       <div id="main_slide" class="carousel slide carousel-fade col-12" data-bs-ride="carousel">
-        <div class="carousel-indicators">
+        <div class="carousel-indicators" style="position: absolute; bottom: -35px;">
           <button type="button" data-bs-target="#main_slide" data-bs-slide-to="0" class="active"></button>
           <button type="button" data-bs-target="#main_slide" data-bs-slide-to="1"></button>
           <button type="button" data-bs-target="#main_slide" data-bs-slide-to="2"></button>
@@ -44,24 +44,24 @@
         
         <div class="carousel-inner">
           <div class="carousel-item active">
-            <a href="#" class="stretched-link"></a>
-            <img src="resources/back.jpg" class="w-100">
+            <a href="2048" class="stretched-link"></a>
+            <img src="resources/2048_icon_wall.png" class="w-100">
             <div class="carousel-caption d-none d-sm-block">
-              <a href="#" class="btn btn-secondary stretched-link">PLAY</a>
+              <a href="2048" class="btn btn-secondary stretched-link">PLAY</a>
             </div>
           </div>
           <div class="carousel-item">
-            <a href="#" class="stretched-link"></a>
-            <img src="resources/backf.jpg" class="w-100">
+            <a href="flappybird" class="stretched-link"></a>
+            <img src="resources/flappy_icon_wall.png" class="w-100">
             <div class="carousel-caption d-none d-sm-block">
-              <a href="#" class="btn btn-secondary stretched-link">PLAY</a>
+              <a href="flappybird" class="btn btn-secondary stretched-link">PLAY</a>
             </div>
           </div>
           <div class="carousel-item">
-            <a href="#" class="stretched-link"></a>
-            <img src="resources/back.jpg" class="w-100">
+            <a href="pacman" class="stretched-link"></a>
+            <img src="resources/pac_icon_wall.png" class="w-100">
             <div class="carousel-caption d-none d-sm-block">
-              <a href="#" class="btn btn-secondary stretched-link">PLAY</a>
+              <a href="pacman" class="btn btn-secondary stretched-link">PLAY</a>
             </div>
           </div>
         </div>
@@ -78,17 +78,17 @@
       <!-- Intro Text -->
       <h1 class="top-sep super-title">Hello, world!</h1>
       <hr>
-      <p class="top-sep">Hi there! I'm a programer, I program things, you may call me programer Kevin.<br>
-        I program in C, it's what I do mostly. But program JavaScript and Python too!<br>
-        I fear them not for I'm a programer and programers don't fear them. Read the manual, I read it there.<br>
-        Some of those things I have programmed are below, you should play them, what are you waiting for.<br>
+      <p class="top-sep col-lg-9">Hi there! I'm a programer, I program things, you may call me programer Kevin.<br>
+        I program in C, it's what I do mostly. But program JavaScript and Python too!
+        I fear them not for I'm a programer and programers don't fear them. Read the manual, I read it there.
+        Some of those things I have programmed are below, you should play them, what are you waiting for.
       </p>
       <img src="resources/sign.webp" class="img-fluid" style="width: 10vw; text-align: center; margin-left:45%">
       <hr>
-      <p class="text-muted top-sep">
-        The programs below were made in C using the SDL library to provide window utilities and input.<br>
-        I then used emcc to make a web ported versions allowing you to play them natively in your browser.<br>
-        If you wish to know more visit this Github page.<br>
+      <p class="text-muted top-sep col-lg-9">
+        The programs below were made in C using the SDL library to provide window utilities and input.
+        I then used emcc to make a web ported versions allowing you to play them natively in your browser.
+        If you wish to know more visit this Github page.
       </p>
       <hr>
       
@@ -97,7 +97,7 @@
       <!-- Program Cards -->
       <div class="card bg-dark text-muted gcard">
         <div class="row">
-          <img class="col-6 gc-image" src="resources/back.jpg">
+          <img class="col-6 gc-image" src="resources/2048_icon.png">
           <div class="col">
             <a href="2048" class="stretched-link"></a>
             <h5 class="card-title" style="padding: 5px;">2048</h5>
@@ -113,7 +113,7 @@
       
       <div class="card bg-dark text-muted gcard">
         <div class="row">
-          <img class="col-6 gc-image" src="resources/back.jpg">
+          <img class="col-6 gc-image" src="resources/pac_icon.png">
           <div class="col">
             <a href="pacman" class="stretched-link"></a>
             <h5 class="card-title" style="margin: 5px;">PacMan</h5>
@@ -145,7 +145,7 @@
       
       <div class="card bg-dark text-muted gcard">
         <div class="row">
-          <img class="col-6 gc-image" src="resources/back.jpg">
+          <img class="col-6 gc-image" src="resources/flappy_icon.png">
           <div class="col">
             <a href="flappybird" class="stretched-link"></a>
             <h5 class="card-title" style="padding: 5px;">Flappybird</h5>
@@ -160,7 +160,7 @@
       
       <div class="card bg-dark text-muted gcard">
         <div class="row">
-          <img class="col-6 gc-image" src="resources/back.jpg">
+          <img class="col-6 gc-image" src="resources/chess_icon.png">
           <div class="col">
             <a href="chess" class="stretched-link"></a>
             <h5 class="card-title" style="margin: 5px;">Chess</h5>

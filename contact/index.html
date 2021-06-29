@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+    <head>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+		<link rel="stylesheet" href="../index.css">
+		<link rel="stylesheet" href="../bs_theme.css">
+
+        <link rel="shortcut icon" href="../resources/Capture.PNG" type="image/x-icon">  
+        <title>I'm a Programer!</title>
+    </head>
+
+    <body>
+
+        <!-- Navigation Bar -->
+        <nav class="navbar-expand navbar-dark bg-dark">
+            <ul class="navbar-nav">
+                <li class="nav-item"><a class="nav-link"        href="../">Home</a></li>
+                <li class="nav-item"><a class="nav-link"        href="#">About_Me</a></li>
+                <li class="nav-item"><a class="nav-link"        href="../resume">Resume</a></li>
+                <li class="nav-item"><a class="nav-link active" href="#">Contact</a></li>
+            </ul>
+        </nav>
+    
+    <div class="fluid-container site" id="site">
+        
+        <img src="../resources/sign.webp" class="img-fluid" style="width: 10vw; text-align: center; margin-left:45%">
+        <hr>
+        <h1 style="margin-top: 8px;">Get in Touch:</h1>
+        <p>Got an adventure in mind? Need a programer on your team? Count me in.</p>
+
+        <div class="row">
+
+            <div class="col-lg-6" style="padding-top: 15px;">
+                <div class="card bg-dark" style="border-radius: 15px;">
+                    <form style="padding: 25px;">
+                        <div class="form-group">
+                            <label for="email">My Email</label>
+                            <div class="col-md-5 mb-4">
+                                <input name="Email" id="mymail" type="email" class="form-control col-2 useri" placeholder="kecolour@gmail.com" disabled>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="mess data">My Message:</label>
+                            <textarea type="text" id="typer" class="form-control useri" name="message" placeholder="Text: Hi, I'd like to..." rows="16" disabled></textarea>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-secondary" disabled>Display</button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="col-lg-6" style="padding-top: 15px;">
+                <div class="card bg-dark" style="border-radius: 15px;">
+                    <form action="https://formspree.io/f/mnqlagwl" method="post" style="padding: 25px;">
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <div class="col-md-5 mb-4">
+                                <input name="Email" id="email" type="email" class="form-control col-2 useri" placeholder="eg: foobar@gmail.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="mess data">Your Message:</label>
+                            <textarea type="text" class="form-control useri" name="message" placeholder="Text: Hi, I'd like to..." rows="16"></textarea>
+                        </div>
+                        <br>
+                        <button type="submit" class="btn btn-secondary">Submit</button>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+
+            <br>
+        <hr>
+        <p style="margin-top: 10px;">You and me, we would make a great team together, what are you waiting <strong style="color: rgb(233, 35, 111);">for</strong>?</p>
+        <hr>
+        <img src="../resources/sign.webp" class="img-fluid" style="width: 10vw; text-align: center; margin-left:45%; transform: scaleY(-1);">
+        
+        
+        <br>
+        <br>
+        <p style="text-align: right; font-size: small;">This website was brought into existence by me.</p>
+        <p class="super-title" style="text-align: right; font-size: small; margin: -15px 0px;">sudo make website</p>
+    </div>
+    
+    
+</body>
+
+    <script>
+    function setURL(url){
+        document.getElementById('cpdf').src = url + ".pdf";
+    }
+    </script>
+    <script src='test.js'></script>
+
+</html>
