@@ -51,8 +51,7 @@ hr {
 }
 
 .gcard {
-    max-width: 720px;
-    max-height: 20vh;
+    max-width: 75vw;
     text-align: center;
     margin: auto;
     margin-bottom: 10px;
