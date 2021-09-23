@@ -187,7 +187,7 @@ var Module = typeof Module !== 'undefined' ? Module : {};
     }
   
    }
-   loadPackage({"files": [{"filename": "/assets/add.png", "start": 0, "end": 396, "audio": 0}, {"filename": "/assets/slider.png", "start": 396, "end": 1292, "audio": 0}, {"filename": "/assets/chary___.ttf", "start": 1292, "end": 21800, "audio": 0}, {"filename": "/assets/slider_move.png", "start": 21800, "end": 22589, "audio": 0}, {"filename": "/assets/save.png", "start": 22589, "end": 23675, "audio": 0}, {"filename": "/assets/button.png", "start": 23675, "end": 24456, "audio": 0}], "remote_package_size": 24456, "package_uuid": "725291f2-7367-4683-8357-6cd411d610ed"});
+   loadPackage({"files": [{"filename": "/assets/add.png", "start": 0, "end": 396, "audio": 0}, {"filename": "/assets/slider.png", "start": 396, "end": 1292, "audio": 0}, {"filename": "/assets/chary___.ttf", "start": 1292, "end": 21800, "audio": 0}, {"filename": "/assets/slider_move.png", "start": 21800, "end": 22589, "audio": 0}, {"filename": "/assets/save.png", "start": 22589, "end": 23675, "audio": 0}, {"filename": "/assets/button.png", "start": 23675, "end": 24456, "audio": 0}], "remote_package_size": 24456, "package_uuid": "4f8842a7-4eee-4fe1-a2ed-e44086fbb13b"});
   
   })();
   

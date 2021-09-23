@@ -136,6 +136,16 @@
 				};
 			};
 		</script>
+
+		<script>
+			async function js_paste() {
+				document.getElementById("clipping").focus();
+				const rtn = await navigator.clipboard.readText();
+				document.getElementById("canvas").focus();
+				return rtn;
+			}
+
+		</script>
 		<script async type="text/javascript" src="index.js"></script>
 	</body>
 </html>
