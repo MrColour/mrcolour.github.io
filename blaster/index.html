@@ -1,38 +1,69 @@
 <!doctype html>
 <html lang="en-us">
 
-	<head>
-		<meta http-equiv=“Pragma” content=”no-cache”>
-		<meta http-equiv=“Expires” content=”-1″>
-		<meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
+<head>
+	<meta http-equiv=“Pragma” content=”no-cache”>
+	<meta http-equiv=“Expires” content=”-1″>
+	<meta http-equiv=“CACHE-CONTROL” content=”NO-CACHE”>
 
-		<meta charset="utf-8">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
 
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-		<link rel="stylesheet" href="../index.css">
-		<link rel="stylesheet" href="../bs_theme.css">
-		<link rel="stylesheet" href="../resources/mrcolour.css">
+	<link rel="stylesheet" href="../index.css">
+	<link rel="stylesheet" href="../bs_theme.css">
+	<link rel="stylesheet" href="../resources/mrcolour.css">
 
-		<link rel="shortcut icon" href="../resources/Capture.PNG" type="image/x-icon">
-		<title>I'm a Programer!</title>
+	<link rel="shortcut icon" href="../resources/Capture.PNG" type="image/x-icon">
+	<title>I'm a Programer!</title>
 
-		<style>
-			body { background-color: #484848; }
-			.emscripten { padding-right: 0; margin-left: auto; margin-right: auto; display: block; border-radius: 5px;}
-			textarea.emscripten { padding-left:8px; font-family: monospace; width: 80%; background-color: black; color:#fff;}
-			/* the canvas *must not* have any border or padding, or mouse coords will be wrong */
-			/* canvas.emscripten { border: 0px none; background-color: black; height: 80vh;} */
-			canvas.emscripten { border: 0px none; background-color: black; height: 80vh;}
+	<style>
+		body {
+			background-color: #484848;
+		}
 
-		</style>
+		.emscripten {
+			padding-right: 0;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			border-radius: 5px;
+		}
 
-	</head>
+		textarea.emscripten {
+			padding-left: 8px;
+			font-family: monospace;
+			width: 80%;
+			background-color: black;
+			color: #fff;
+		}
 
-	<body>
+		/* the canvas *must not* have any border or padding, or mouse coords will be wrong */
+		/* canvas.emscripten { border: 0px none; background-color: black; height: 80vh;} */
+		canvas.emscripten {
+			border: 0px none;
+			background-color: black;
+			height: 80vh;
+		}
+	</style>
 
-		<div class="fluid-container site" id="site">
+</head>
+
+<body>
+
+	<!-- Navigation Bar -->
+	<nav class="navbar-expand navbar-dark bg-dark">
+		<ul class="navbar-nav">
+			<li class="nav-item"><a class="nav-link" href="..">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="#">About_Me</a></li>
+			<li class="nav-item"><a class="nav-link" href="../resume">Resume</a></li>
+			<li class="nav-item"><a class="nav-link" href="../contact">Contact</a></li>
+		</ul>
+	</nav>
+
+	<div class="fluid-container site" id="site">
 		<img src="../resources/sign.webp" class="img-fluid" style="width: 10vw; text-align: center; margin-left: 45%">
 
 		<div class="emscripten" id="status"></div>
@@ -46,7 +77,8 @@
 			<canvas class="emscripten" id="canvas" oncontextmenu="event.preventDefault()" tabindex=-1></canvas>
 		</div>
 
-		<img src="../resources/sign.webp" class="img-fluid" style="width: 10vw; text-align: center; margin-left:45%; transform: scaleY(-1);">
+		<img src="../resources/sign.webp" class="img-fluid"
+			style="width: 10vw; text-align: center; margin-left:45%; transform: scaleY(-1);">
 
 		<br>
 		<!-- <textarea class="emscripten" id="output" rows="12"></textarea> -->
@@ -54,12 +86,18 @@
 		<h1>More by Me.</h1>
 		<hr>
 		<ul id="hlist">
-			<li><a href="../2048"		style="text-decoration:none;"><img class="cicon" src="../resources/icon_2048.png"></a></li>
-			<li><a href="../pacman"	style="text-decoration:none;"><img class="cicon" src="../resources/icon_pac.png"></a></li>
-			<li><a href="../tictac"	style="text-decoration:none;"><img class="cicon" src="../resources/icon_tictac.png"></a></li>
-			<li><a href="../flappybird"style="text-decoration:none;"><img class="cicon" src="../resources/icon_flappy.png"></a></li>
-			<li><a href="../chess"		style="text-decoration:none;"><img class="cicon" src="../resources/icon_chess.png"></a></li>
-			<li><a href="../gradient" style="text-decoration:none;"><img class="cicon" src="../resources/icon_clerp.png"></a></li>
+			<li><a href="../2048" style="text-decoration:none;"><img class="cicon" src="../resources/icon_2048.png"></a>
+			</li>
+			<li><a href="../pacman" style="text-decoration:none;"><img class="cicon"
+						src="../resources/icon_pac.png"></a></li>
+			<li><a href="../tictac" style="text-decoration:none;"><img class="cicon"
+						src="../resources/icon_tictac.png"></a></li>
+			<li><a href="../flappybird" style="text-decoration:none;"><img class="cicon"
+						src="../resources/icon_flappy.png"></a></li>
+			<li><a href="../chess" style="text-decoration:none;"><img class="cicon"
+						src="../resources/icon_chess.png"></a></li>
+			<li><a href="../gradient" style="text-decoration:none;"><img class="cicon"
+						src="../resources/icon_clerp.png"></a></li>
 		</ul>
 
 		<script type='text/javascript'>
@@ -69,10 +107,10 @@
 			var Module = {
 				preRun: [],
 				postRun: [],
-				print: (function() {
+				print: (function () {
 					var element = document.getElementById('output');
 					if (element) element.value = ''; // clear browser cache
-					return function(text) {
+					return function (text) {
 						if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
 						// These replacements are necessary if you render to raw HTML
 						//text = text.replace(/&/g, "&amp;");
@@ -86,21 +124,21 @@
 						}
 					};
 				})(),
-				printErr: function(text) {
+				printErr: function (text) {
 					if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
 					console.error(text);
 				},
-				canvas: (function() {
+				canvas: (function () {
 					var canvas = document.getElementById('canvas');
 
 					// As a default initial behavior, pop up an alert when webgl context is lost. To make your
 					// application robust, you may want to override this behavior before shipping!
 					// See http://www.khronos.org/registry/webgl/specs/latest/1.0/#5.15.2
-					canvas.addEventListener("webglcontextlost", function(e) { alert('WebGL context lost. You will need to reload the page.'); e.preventDefault(); }, false);
+					canvas.addEventListener("webglcontextlost", function (e) { alert('WebGL context lost. You will need to reload the page.'); e.preventDefault(); }, false);
 
 					return canvas;
 				})(),
-				setStatus: function(text) {
+				setStatus: function (text) {
 					if (!Module.setStatus.last) Module.setStatus.last = { time: Date.now(), text: '' };
 					if (text === Module.setStatus.last.text) return;
 					var m = text.match(/([^(]+)\((\d+(\.\d+)?)\/(\d+)\)/);
@@ -110,8 +148,8 @@
 					Module.setStatus.last.text = text;
 					if (m) {
 						text = m[1];
-						progressElement.value = parseInt(m[2])*100;
-						progressElement.max = parseInt(m[4])*100;
+						progressElement.value = parseInt(m[2]) * 100;
+						progressElement.max = parseInt(m[4]) * 100;
 						progressElement.hidden = false;
 					} else {
 						progressElement.value = null;
@@ -121,20 +159,20 @@
 					statusElement.innerHTML = text;
 				},
 				totalDependencies: 0,
-				monitorRunDependencies: function(left) {
+				monitorRunDependencies: function (left) {
 					this.totalDependencies = Math.max(this.totalDependencies, left);
-					Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies-left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
+					Module.setStatus(left ? 'Preparing... (' + (this.totalDependencies - left) + '/' + this.totalDependencies + ')' : 'All downloads complete.');
 				}
 			};
 			Module.setStatus('Downloading...');
-			window.onerror = function() {
+			window.onerror = function () {
 				Module.setStatus('Exception thrown, see JavaScript console');
-				Module.setStatus = function(text) {
+				Module.setStatus = function (text) {
 					if (text) Module.printErr('[post-exception status] ' + text);
 				};
 			};
 		</script>
 		<script async type="text/javascript" src="index.js"></script>
-	</body>
-</html>
+</body>
 
+</html>

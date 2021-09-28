@@ -1,213 +1,219 @@
 <!doctype html>
 
 <html lang="en">
-  <head>
-    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate"/>
-    <meta http-equiv="Pragma" content="no-cache"/>
-    <meta http-equiv="Expires" content="0"/>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<head>
+	<meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate" />
+	<meta http-equiv="Pragma" content="no-cache" />
+	<meta http-equiv="Expires" content="0" />
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="index.css">
-    <link rel="stylesheet" href="btsp_theme.css">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
-    <link rel="shortcut icon" href="resources/Capture.PNG" type="image/x-icon">
-    <title>I'm a Programer!</title>
+	<link rel="stylesheet" href="index.css">
+	<link rel="stylesheet" href="btsp_theme.css">
 
-  </head>
+	<link rel="shortcut icon" href="resources/Capture.PNG" type="image/x-icon">
+	<title>I'm a Programer!</title>
 
-  <body>
+</head>
 
-    <!-- Navigation Bar -->
-    <nav class="navbar-expand navbar-dark bg-dark">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
-          <li class="nav-item"><a class="nav-link"        href="#">About_Me</a></li>
-          <li class="nav-item"><a class="nav-link"        href="/resume">Resume</a></li>
-          <li class="nav-item"><a class="nav-link"        href="/contact">Contact</a></li>
-        </ul>
-    </nav>
+<body>
 
-    <div class="fluid-container site" id="site">
+	<!-- Navigation Bar -->
+	<nav class="navbar-expand navbar-dark bg-dark">
+		<ul class="navbar-nav">
+			<li class="nav-item"><a class="nav-link active" href="#">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="#">About_Me</a></li>
+			<li class="nav-item"><a class="nav-link" href="/resume">Resume</a></li>
+			<li class="nav-item"><a class="nav-link" href="/contact">Contact</a></li>
+		</ul>
+	</nav>
 
-      <!-- SlideShow of Projects -->
-      <br>
-      <div id="main_slide" class="carousel slide carousel-fade col-12" data-bs-ride="carousel">
-        <div class="carousel-indicators" style="position: absolute; bottom: -35px;">
-          <button type="button" data-bs-target="#main_slide" data-bs-slide-to="0" class="active"></button>
-          <button type="button" data-bs-target="#main_slide" data-bs-slide-to="1"></button>
-          <button type="button" data-bs-target="#main_slide" data-bs-slide-to="2"></button>
-          <button type="button" data-bs-target="#main_slide" data-bs-slide-to="3"></button>
-        </div>
-		<div class="carousel-inner">
+	<div class="fluid-container site" id="site">
+
+		<!-- SlideShow of Projects -->
+		<br>
+		<div id="main_slide" class="carousel slide carousel-fade col-12" data-bs-ride="carousel">
+			<div class="carousel-indicators" style="position: absolute; bottom: -35px;">
+				<button type="button" data-bs-target="#main_slide" data-bs-slide-to="0" class="active"></button>
+				<button type="button" data-bs-target="#main_slide" data-bs-slide-to="1"></button>
+				<button type="button" data-bs-target="#main_slide" data-bs-slide-to="2"></button>
+				<button type="button" data-bs-target="#main_slide" data-bs-slide-to="3"></button>
+			</div>
+			<div class="carousel-inner">
 
 
-			<div class="carousel-item active">
-				<a href="2048" class="stretched-link"></a>
-				<img src="resources/wall_icon_mem.png" class="w-100">
-				<div class="carousel-caption d-none d-sm-block">
-				<a href="blaster" class="btn btn-secondary stretched-link">PLAY</a>
+				<div class="carousel-item active">
+					<a href="blaster" class="stretched-link"></a>
+					<img src="resources/wall_icon_mem.png" class="w-100">
+					<div class="carousel-caption d-none d-sm-block">
+						<a href="blaster" class="btn btn-secondary stretched-link">PLAY</a>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<a href="2048" class="stretched-link"></a>
+					<img src="resources/wall_icon_2048.png" class="w-100">
+					<div class="carousel-caption d-none d-sm-block">
+						<a href="2048" class="btn btn-secondary stretched-link">PLAY</a>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<a href="flappybird" class="stretched-link"></a>
+					<img src="resources/wall_icon_flappy.png" class="w-100">
+					<div class="carousel-caption d-none d-sm-block">
+						<a href="flappybird" class="btn btn-secondary stretched-link">PLAY</a>
+					</div>
+				</div>
+				<div class="carousel-item">
+					<a href="pacman" class="stretched-link"></a>
+					<img src="resources/wall_icon_pac.png" class="w-100">
+					<div class="carousel-caption d-none d-sm-block">
+						<a href="pacman" class="btn btn-secondary stretched-link">PLAY</a>
+					</div>
 				</div>
 			</div>
-          <div class="carousel-item">
-            <a href="2048" class="stretched-link"></a>
-            <img src="resources/wall_icon_2048.png" class="w-100">
-            <div class="carousel-caption d-none d-sm-block">
-              <a href="2048" class="btn btn-secondary stretched-link">PLAY</a>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <a href="flappybird" class="stretched-link"></a>
-            <img src="resources/wall_icon_flappy.png" class="w-100">
-            <div class="carousel-caption d-none d-sm-block">
-              <a href="flappybird" class="btn btn-secondary stretched-link">PLAY</a>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <a href="pacman" class="stretched-link"></a>
-            <img src="resources/wall_icon_pac.png" class="w-100">
-            <div class="carousel-caption d-none d-sm-block">
-              <a href="pacman" class="btn btn-secondary stretched-link">PLAY</a>
-            </div>
-          </div>
-        </div>
 
-        <button class="carousel-control-prev" type="button" data-bs-target="#main_slide" data-bs-slide="prev">
-          <span class="carousel-control-prev-icon"></span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#main_slide" data-bs-slide="next">
-          <span class="carousel-control-next-icon"></span>
-        </button>
+			<button class="carousel-control-prev" type="button" data-bs-target="#main_slide" data-bs-slide="prev">
+				<span class="carousel-control-prev-icon"></span>
+			</button>
+			<button class="carousel-control-next" type="button" data-bs-target="#main_slide" data-bs-slide="next">
+				<span class="carousel-control-next-icon"></span>
+			</button>
 
-      </div>
+		</div>
 
-      <!-- Intro Text -->
-      <h1 class="top-sep super-title">Hello, world!</h1>
-      <hr>
-      <p class="top-sep col-lg-9">Hi there! I'm a programer, I program things, you may call me programer Kevin.<br>
-        I program in C, it's what I do mostly. But program JavaScript and Python too!
-        I fear them not for I'm a programer and programers don't fear them. Read the manual, I read it there.
-        Some of those things I have programmed are below, you should play them, what are you waiting for.
-      </p>
-      <img src="resources/sign.webp" class="img-fluid" style="width: 10vw; text-align: center; margin-left:45%">
-      <hr>
-      <p class="text-muted top-sep col-lg-9">
-        The programs below were made in C using the SDL library to provide window utilities and input.
-        I then used emcc to make a web ported versions allowing you to play them natively in your browser.
-        If you wish to know more visit this Github page.
-      </p>
-      <hr>
+		<!-- Intro Text -->
+		<h1 class="top-sep super-title">Hello, world!</h1>
+		<hr>
+		<p class="top-sep col-lg-9">Hi there! I'm a programer, I program things, you may call me programer Kevin.<br>
+			I program in C, it's what I do mostly. But program JavaScript and Python too!
+			I fear them not for I'm a programer and programers don't fear them. Read the manual, I read it there.
+			Some of those things I have programmed are below, you should play them, what are you waiting for.
+		</p>
+		<img src="resources/sign.webp" class="img-fluid" style="width: 10vw; text-align: center; margin-left:45%">
+		<hr>
+		<p class="text-muted top-sep col-lg-9">
+			The programs below were made in C using the SDL library to provide window utilities and input.
+			I then used emcc to make a web ported versions allowing you to play them natively in your browser.
+			If you wish to know more visit this Github page.
+		</p>
+		<hr>
 
-      <br>
+		<br>
 
-      <!-- Program Cards -->
-      <div class="card bg-dark text-muted gcard">
-        <div class="row">
-          <img class="col-5 gc-image" src="resources/icon_2048.png">
-          <div class="col">
-            <a href="2048" class="stretched-link"></a>
-            <h5 class="card-title" style="padding: 5px;">2048</h5>
-            <hr>
-            <hr>
-            <p class="card-text">2, 4, 8, 16 how high will you go!</p>
-            <br>
-            <br>
-            <a href="2048" class="btn btn-secondary stretched-link gc-button">PLAY</a>
-          </div>
-        </div>
-      </div>
+		<!-- Program Cards -->
+		<div class="card bg-dark text-muted gcard">
+			<div class="row">
+				<img class="col-5 gc-image" src="resources/icon_2048.png">
+				<div class="col">
+					<a href="2048" class="stretched-link"></a>
+					<h5 class="card-title" style="padding: 5px;">2048</h5>
+					<hr>
+					<hr>
+					<p class="card-text">2, 4, 8, 16 how high will you go!</p>
+					<br>
+					<br>
+					<a href="2048" class="btn btn-secondary stretched-link gc-button">PLAY</a>
+				</div>
+			</div>
+		</div>
 
-      <div class="card bg-dark text-muted gcard">
-        <div class="row">
-          <img class="col-5 gc-image" src="resources/icon_pac.png">
-          <div class="col">
-            <a href="pacman" class="stretched-link"></a>
-            <h5 class="card-title" style="padding: 5px;">PacMan</h5>
-            <hr>
-            <p class="card-text">Recreation of Classic Game.</p>
-            <br>
-            <br>
-            <a href="pacman" class="btn btn-secondary stretched-link gc-button">PLAY</a>
-          </div>
-        </div>
-      </div>
+		<div class="card bg-dark text-muted gcard">
+			<div class="row">
+				<img class="col-5 gc-image" src="resources/icon_pac.png">
+				<div class="col">
+					<a href="pacman" class="stretched-link"></a>
+					<h5 class="card-title" style="padding: 5px;">PacMan</h5>
+					<hr>
+					<p class="card-text">Recreation of Classic Game.</p>
+					<br>
+					<br>
+					<a href="pacman" class="btn btn-secondary stretched-link gc-button">PLAY</a>
+				</div>
+			</div>
+		</div>
 
-      <div class="card bg-dark text-muted gcard">
-        <div class="row">
-          <img class="col-5 gc-image" src="resources/icon_tictac.png">
-          <div class="col">
-            <a href="tictac" class="stretched-link"></a>
-            <h5 class="card-title" style="padding: 5px;">Tic-Tac-Toe</h5>
-            <hr>
-            <p class="card-text">I challenge you!</p>
-            <br>
-            <br>
-            <a href="tictac" class="btn btn-secondary stretched-link gc-button">PLAY</a>
-          </div>
-        </div>
-      </div>
+		<div class="card bg-dark text-muted gcard">
+			<div class="row">
+				<img class="col-5 gc-image" src="resources/icon_tictac.png">
+				<div class="col">
+					<a href="tictac" class="stretched-link"></a>
+					<h5 class="card-title" style="padding: 5px;">Tic-Tac-Toe</h5>
+					<hr>
+					<p class="card-text">I challenge you!</p>
+					<br>
+					<br>
+					<a href="tictac" class="btn btn-secondary stretched-link gc-button">PLAY</a>
+				</div>
+			</div>
+		</div>
 
 
-      <div class="card bg-dark text-muted gcard">
-        <div class="row">
-          <img class="col-5 gc-image" src="resources/icon_flappy.png">
-          <div class="col">
-            <a href="flappybird" class="stretched-link"></a>
-            <h5 class="card-title" style="padding: 5px;">Flappybird</h5>
-            <hr>
-            <p class="card-text">How many pipes will you jump?</p>
-            <br>
-            <br>
-            <a href="flappybird" class="btn btn-secondary stretched-link gc-button">PLAY</a>
-          </div>
-        </div>
-      </div>
+		<div class="card bg-dark text-muted gcard">
+			<div class="row">
+				<img class="col-5 gc-image" src="resources/icon_flappy.png">
+				<div class="col">
+					<a href="flappybird" class="stretched-link"></a>
+					<h5 class="card-title" style="padding: 5px;">Flappybird</h5>
+					<hr>
+					<p class="card-text">How many pipes will you jump?</p>
+					<br>
+					<br>
+					<a href="flappybird" class="btn btn-secondary stretched-link gc-button">PLAY</a>
+				</div>
+			</div>
+		</div>
 
-      <div class="card bg-dark text-muted gcard">
-        <div class="row">
-          <img class="col-5 gc-image" src="resources/icon_chess.png">
-          <div class="col">
-            <a href="chess" class="stretched-link"></a>
-            <h5 class="card-title" style="padding: 5px;">Chess</h5>
-            <hr>
-            <p class="card-text">Game as old as time.</p>
-            <br>
-            <br>
-            <br>
-            <a href="chess" class="btn btn-secondary stretched-link gc-button">PLAY</a>
-          </div>
-        </div>
-      </div>
+		<div class="card bg-dark text-muted gcard">
+			<div class="row">
+				<img class="col-5 gc-image" src="resources/icon_chess.png">
+				<div class="col">
+					<a href="chess" class="stretched-link"></a>
+					<h5 class="card-title" style="padding: 5px;">Chess</h5>
+					<hr>
+					<p class="card-text">Game as old as time.</p>
+					<br>
+					<br>
+					<br>
+					<a href="chess" class="btn btn-secondary stretched-link gc-button">PLAY</a>
+				</div>
+			</div>
+		</div>
 
-      <div class="card bg-dark text-muted gcard">
-        <div class="row">
-          <img class="col-5 gc-image" src="resources/icon_clerp.png">
-          <div class="col">
-            <a href="gradient" class="stretched-link"></a>
-            <h5 class="card-title" style="padding: 5px;">Clerp</h5>
-            <hr>
-            <p class="card-text">Autogenerate code, interpolation of colors to add to existing C projects!</p>
-            <br>
-            <br>
-            <br>
-            <a href="gradient" class="btn btn-secondary stretched-link gc-button">PLAY</a>
-          </div>
-        </div>
-      </div>
+		<div class="card bg-dark text-muted gcard">
+			<div class="row">
+				<img class="col-5 gc-image" src="resources/icon_clerp.png">
+				<div class="col">
+					<a href="gradient" class="stretched-link"></a>
+					<h5 class="card-title" style="padding: 5px;">Clerp</h5>
+					<hr>
+					<p class="card-text">Autogenerate code, interpolation of colors to add to existing C projects!</p>
+					<br>
+					<br>
+					<br>
+					<a href="gradient" class="btn btn-secondary stretched-link gc-button">PLAY</a>
+				</div>
+			</div>
+		</div>
 
-      <br>
-      <hr>
-      <img src="resources/sign.webp" class="img-fluid" style="width: 10vw; text-align: center; margin-left:45%; transform: scaleY(-1);">
+		<br>
+		<hr>
+		<img src="resources/sign.webp" class="img-fluid"
+			style="width: 10vw; text-align: center; margin-left:45%; transform: scaleY(-1);">
 
-      <p style="text-align: right; font-size: small;">This website was brought into existence by me.</p>
-      <p class="super-title" style="text-align: right; font-size: small;">sudo make website</p>
+		<p style="text-align: right; font-size: small;">This website was brought into existence by me.</p>
+		<p class="super-title" style="text-align: right; font-size: small;">sudo make website</p>
 
-    </div>
+	</div>
 
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js" integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0" crossorigin="anonymous"></script>
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+		crossorigin="anonymous"></script>
 
-  </body>
-  </html>
+</body>
+
+</html>
