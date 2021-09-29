@@ -1,69 +1,73 @@
 <!doctype html>
 <html lang="en-us">
 
-	<head>
-		<meta charset="utf-8">
-		<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-		<title>Emscripten-Generated Code</title>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Emscripten-Generated Code</title>
 
-		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
-			integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
 
-		<link rel="stylesheet" href="../index.css">
-		<link rel="stylesheet" href="../btsp_theme.css">
-		<link rel="stylesheet" href="../resources/mrcolour.css">
+	<link rel="stylesheet" href="../index.css">
+	<link rel="stylesheet" href="../btsp_theme.css">
+	<link rel="stylesheet" href="../resources/mrcolour.css">
 
-		<link rel="shortcut icon" href="../resources/Capture.PNG" type="image/x-icon">
-		<title>I'm a Programer!</title>
+	<link rel="shortcut icon" href="../resources/Capture.PNG" type="image/x-icon">
+	<title>I'm a Programer!</title>
 
-		<style>
-			body {
-				background-color: #484848;
-			}
+	<style>
+		body {
+			background-color: #484848;
+		}
 
-			.emscripten {
-				padding-right: 0;
-				margin-left: auto;
-				margin-right: auto;
-				display: block;
-				border-radius: 5px;
-			}
+		.emscripten {
+			padding-right: 0;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			border-radius: 5px;
+		}
 
-			textarea.emscripten {
-				padding-left: 8px;
-				font-family: monospace;
-				width: 80%;
-				background-color: black;
-				color: #fff;
-			}
+		textarea.emscripten {
+			padding-left: 8px;
+			font-family: monospace;
+			width: 80%;
+			background-color: black;
+			color: #fff;
+		}
 
-			/* the canvas *must not* have any border or padding, or mouse coords will be wrong */
-			canvas.emscripten {
-				border: 0px none;
-				background-color: black;
-			}
-		</style>
+		/* the canvas *must not* have any border or padding, or mouse coords will be wrong */
+		canvas.emscripten {
+			border: 0px none;
+			background-color: black;
+		}
+	</style>
 
-	</head>
+</head>
 
-	<body>
+<body>
 
-		<!-- Navigation Bar -->
-		<nav class="navbar-expand navbar-dark bg-dark">
-			<ul class="navbar-nav">
-				<li class="nav-item"><a class="nav-link" href="..">Home</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">About_Me</a></li>
-				<li class="nav-item"><a class="nav-link" href="../resume">Resume</a></li>
-				<li class="nav-item"><a class="nav-link" href="../contact">Contact</a></li>
-				<li class="nav-item"><a class="nav-link" href="../credentials">Credentials</a></li>
-			</ul>
-		</nav>
+	<!-- Navigation Bar -->
+	<nav class="navbar-expand navbar-dark bg-dark">
+		<ul class="navbar-nav">
+			<li class="nav-item"><a class="nav-link" href="..">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="#">About_Me</a></li>
+			<li class="nav-item"><a class="nav-link" href="../resume">Resume</a></li>
+			<li class="nav-item"><a class="nav-link" href="../contact">Contact</a></li>
+			<li class="nav-item"><a class="nav-link" href="../credentials">Credentials</a></li>
+		</ul>
+	</nav>
 
-		<!-- Intro Text -->
+	<!-- Intro Text -->
+	<div class="fluid-container site" id="site">
+
 		<h1 class="top-sep super-title">Uplinkx</h1>
-		<hr>
-		<h4 class="top-sep title">Summary:</h4>
+		<img src="../resources/meta_uplink.png" class="img-fluid" style="width: 40vw; text-align: center; margin-left:30%">
+		<br>
 		<p class="top-sep col-lg-9">
+			<h4 class="top-sep title">Summary:</h4>
+			<hr>
 			Better than a Github README page.
 			<br>
 			My craft is writing very detailed instructions that change
@@ -75,57 +79,75 @@
 		<img src="../resources/sign.png" class="img-fluid" style="width: 10vw; text-align: center; margin-left:45%">
 		<hr>
 
-		<h4 class="top-sep">Log 000:</h4>
+		<h2 class="top-sep title">Log 00:</h2>
+		<hr>
+		<!-- <img src="../resources/meta_web.png" class="img-fluid" style="width: 50vw; text-align: center; margin-left:22%"> -->
+		<!-- <br> -->
+		<!-- <br> -->
 		<p>
 			Specify the requirements you want: a website, highly customizable, with full ownership. This meant
-			I would have to write my own website, with a minimal layer to serve as the <a href="https://github.com/MrColour/mrcolour.github.io" class="pink_link">host</a>, preferably with
+			I would have to write my own website, with a minimal layer to serve as the <a
+			href="https://github.com/MrColour/mrcolour.github.io" class="pink_link">host</a>, preferably with
 			as few constraints as possible.
 		</p>
 
-		<h4 class="top-sep">Log 001:</h4>
+		<h2 class="top-sep title">Log 01:</h2>
+		<hr>
 		Find a way to make a C program run in the web. This lead me to Emscripten, just follow
 		<a href="https://emscripten.org/docs/getting_started/downloads.html" class="pink_link">these</a>
 		install instructions and
 		<a href="https://emscripten.org/docs/getting_started/Tutorial.html" class="pink_link">this</a>
 		sanity check
-		<bdi class="warning">(</bdi><bdi class="warning_text">if you use sdl_ttf2 you may get errors, my fix was to downgrade emscripten to version 2.0.10 which
+		<bdi class="warning">(</bdi><bdi class="warning_text">if you use sdl_ttf2 you may get errors, my fix was to
+			downgrade emscripten to version 2.0.10 which
 			surprisingly worked</bdi><bdi class="warning">)</bdi>
-			<h4 class="top-sep">Log 002:</h4>
-		Luckily I had a few projects to port and began getting them onto the web. These
-		projects were from my <a href="https://github.com/ASSERT-game" class="pink_link">ASSERT_game</a>
-		series whose aims was to teach me what goes into making a game, and has me develop the tools
-		that would allow me to do so. From rendering pipelines using sprite structs to Xbox controller inputs,
-		I tried to create simple but varied projects to grow my expertise in software development and architecture.
-		Simple turn based loop in chess, real-time program in flappy bird, input and architecture in pacman, and quality
-		assurance in 2048.
-		<br>
-		<br>
-		During this time I brainstormed designs and was beginning to develop the personality I wanted the website to have
-		through trial and error. The programs above however were not made with the intention of being played through the web.
-		So I set out to create an applications that would be made with touch input from mobile in mind.
-		<h4 class="top-sep">Log 003:</h4>
+			<h2 class="top-sep title">Log 02:</h2>
+			<img src="../resources/meta_web.png" class="img-fluid" style="width: 50vw; text-align: center; margin-left:22%">
+			<!-- <hr> -->
+			<br>
+			Luckily I had a few projects to port and began getting them onto the web. These
+			projects were from my <a href="https://github.com/ASSERT-game" class="pink_link">ASSERT_game</a>
+			series whose aims was to teach me what goes into making a game, and has me develop the tools
+			that would allow me to do so. From rendering pipelines using sprite structs to Xbox controller inputs,
+			I tried to create simple but varied projects to grow my expertise in software development and architecture.
+			Simple turn based loop in chess, real-time program in flappy bird, input and architecture in pacman, and quality
+			assurance in 2048.
+			<br>
+			<br>
+			During this time I brainstormed designs and was beginning to develop the personality I wanted the website to
+			have
+			through trial and error. The programs above however were not made with the intention of being played through the
+			web.
+			So I set out to create an applications that would be made with touch input from mobile in mind.
+			<h2 class="top-sep title">Log 03:</h2>
+			<hr>
 
-		<img src="../resources/meta_mym_title.png" class="img-fluid" style="width: 40vw; text-align: center; margin-left:30%">
+		<img src="../resources/meta_mym_title.png" class="img-fluid"
+		style="width: 40vw; text-align: center; margin-left:30%">
 		<br>
-		The next project would take would take all the dedication I had to make. If completed it would be the biggest project
+		The next project would take would take all the dedication I had to make. If completed it would be the biggest
+		project
 		I had made to date. It would involve many different systems working together, a more detailed report
-		is found <a href="https://github.com/ASSERT-game" class="pink_link">here</a> if you are curious by what I mean. It
+		is found <a href="https://github.com/ASSERT-game" class="pink_link">here</a> if you are curious by what I mean.
+		It
 		is so far the most complete game I have made and I encourage you to
 		<a href="https://mrcolour.github.io/blaster/" class="pink_link">play</a> it.
+		<br>
 
 		<br>
 		<hr>
 		<img src="../resources/sign.png" class="img-fluid"
-		style="width: 10vw; text-align: center; margin-left:45%; transform: scaleY(-1);">
+			style="width: 10vw; text-align: center; margin-left:45%; transform: scaleY(-1);">
 
-		<p style="text-align: right; font-size: small;">Website's Source Code <a href="https://github.com/MrColour/mrcolour.github.io" class="pink_link">here</a> </p>
+		<p style="text-align: right; font-size: small;">Website's Source Code <a
+				href="https://github.com/MrColour/mrcolour.github.io" class="pink_link">here</a> </p>
 
-		</div>
+	</div>
 
-		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
 		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
-			crossorigin="anonymous"></script>
+		crossorigin="anonymous"></script>
 
-		</body>
+</body>
 
-		</html>
+</html>
