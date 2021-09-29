@@ -52,3 +52,20 @@ ul#hlist li {
 	-webkit-text-fill-color: transparent;
 	text-shadow: 0 0 7px rgba(69, 215, 255, 0.387)
 }
+
+.pink_link
+{
+	text-decoration:none;
+	color: rgb(233, 35, 111);
+	text-shadow: 0 0 20px rgba(255, 98, 156, 0.429)
+}
+
+.warning
+{
+	color: rgb(251, 236, 71);
+}
+
+.warning_text
+{
+	color: rgb(208, 228, 148);
+}
