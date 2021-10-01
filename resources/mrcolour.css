@@ -71,6 +71,12 @@ ul#hlist li {
 	color: rgb(208, 228, 148);
 }
 
+.bright
+{
+	color: rgb(0, 255, 225);
+	text-shadow: 0 0 20px rgba(255, 255, 255, 0.312)
+}
+
 .title
 {
 	color: rgb(230, 0, 255);
