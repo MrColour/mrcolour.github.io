@@ -1,0 +1,330 @@
+<!doctype html>
+<html lang="en-us">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>Emscripten-Generated Code</title>
+
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
+
+	<link rel="stylesheet" href="../index.css">
+	<link rel="stylesheet" href="../btsp_theme.css">
+	<link rel="stylesheet" href="../resources/mrcolour.css">
+
+	<link rel="shortcut icon" href="../resources/Capture.PNG" type="image/x-icon">
+	<title>I'm a Programer!</title>
+
+	<style>
+		body {
+			background-color: #484848;
+		}
+
+		.emscripten {
+			padding-right: 0;
+			margin-left: auto;
+			margin-right: auto;
+			display: block;
+			border-radius: 5px;
+		}
+
+		textarea.emscripten {
+			padding-left: 8px;
+			font-family: monospace;
+			width: 80%;
+			background-color: black;
+			color: #fff;
+		}
+
+		/* the canvas *must not* have any border or padding, or mouse coords will be wrong */
+		canvas.emscripten {
+			border: 0px none;
+			background-color: black;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<!-- Navigation Bar -->
+	<nav class="navbar-expand navbar-dark bg-dark">
+		<ul class="navbar-nav">
+			<li class="nav-item"><a class="nav-link" href="..">Home</a></li>
+			<li class="nav-item"><a class="nav-link" href="/about_me/">About_Me</a></li>
+			<li class="nav-item"><a class="nav-link" href="../resume">Resume</a></li>
+			<li class="nav-item"><a class="nav-link" href="../contact">Contact</a></li>
+		</ul>
+	</nav>
+
+	<!-- Intro Text -->
+	<div class="fluid-container site" id="site">
+
+		<img src="../resources/meta_mym_title.png" class="img-fluid" style="width: 40vw; text-align: center; margin-left:30%">
+		<br>
+		<p class="top-sep col-lg-9">
+			<h2 class="top-sep title">Summary:</h2>
+			<hr>
+			A game is programing marvel involving many moving parts. Here is a record
+			of the systems I built and some of the things I went through as I built Mympheus and the Dawnlit Grotto
+			from what would be zero code. I hope it proves helpful to anyone trying to make their own application from scratch.
+			<br>
+		</p>
+
+		<h2 class="top-sep title">Foundations</h2>
+		<hr>
+		<p>
+			There exist a boundary at which code becomes an emergent property that interacts with circuits. My focus was
+			to write C code whose behavior a person would call a 'video game'. I must emphasize the part that says
+			'write C code whose behavior...'.
+		</p>
+		<p>
+			The C programing language to a great extent allows a direct mapping
+			of an imaginary computer machine, whose purpose is to transform sections of bits (bytes) to ones and zeros, albeit
+			a naive one at that. There is a minor mental abstraction, but an awesome technical one,
+			that happens when C code is transformed, or more appropriately compiled and assembled, into machine code. However
+			this is post about the systems I built for Mympheus and not about C so to cut it short; I wanted to be able to
+			picture exactly how these ones and zeros are transformed into a game.
+		</p>
+		<p>
+			This is important for you to know because what I was not interested in was learning hardware specific things. My goal
+			was not to learn the x86 Assembly instruction set or the various types of voltage gates that make up memory, or how
+			a current of electrons travel along copper wire that has been etched into a silicon wafer with the power of lasers
+			using a process called photolithography. I was not interested in implementing and learning the specific way my
+			OS handles the keyboard, mouse, or how specific way I must read a .png file to get the pixel contents, and how I
+			am suppose to package and send that data to be displayed on a monitor screen.
+		</p>
+		<p>
+			In my project the only code I cannot claim to have written or thought of is from a library called SDL, SDL2 more
+			accurately with SDL_TTF, and SDL_IMAGE. My project includes the SDL headers and is compiled with SDL libraries. That is
+			the external code I use as it "is a cross-platform software development library designed to provide a hardware abstraction
+			layer for computer multimedia hardware components."
+		</p>
+		<br>
+		<p>
+			With that said there are non technical things to keep in mind as you read this post. I have found them useful
+			and they form a certain philosophy in how I write C code.
+		</p>
+		<p>
+			In no particular order, the first is 'Optimize Later'. There is a certain tension between writing bad code
+			and what all programers should know as 'premature optimization is the root of all evil'. The cause of this
+			is because oddly enough good code is not highly optimized code, highly optimized code is just that, highly
+			optimized code. This however is not an excuse to write code with the worst performance. Write code with the
+			mindset that it may need to be optimized later. What I try to do is give the code room to be optimized later
+			in a way that is the least destructive.
+		</p>
+		<p>
+			What this means for this post is that I some parts will not be the most optimized in any way.
+			The reason for it was because it has not yet been needed! So don't get grumpy at me if I
+			didn't do space partitioning or struct packing.
+		</p>
+		<p>
+			The second is to write as if your user is a programmer. I want to write functions that the
+			programer will enjoy using. I need to think about when and how the programmer will use functions.
+			This is hard to express into words but the gist of it is that I want to write functions that
+			feel good to use. I hope that reading this post will make you better at doing this.
+		</p>
+
+		<h2 class="top-sep title">Display</h2>
+		<hr>
+		<p>
+			Being able to display something is extremely important. So much so that it is a very good idea
+			to have something like a global variable that allows you to fetch the things to draw or display on the screen.
+			One never knows the context in which someone will attempt to display something. To put this into
+			perspective, one never knows when one will have to debug a portion of code. In those times
+			it greatly helps to display information as a sanity check on assumptions you have. By definition of
+			debugging you do not know the context, else you would have written bug free code, and the last thing you want
+			to do is pass a parameter and change function signatures, or change a structure layout throughout large portions of the code.
+		</p>
+		<p>
+			The important part is that what is required is being able to fetch, not set, the context. For this
+			I used the code below.
+			<img src="../resources/meta_mym_title.png" class="img-fluid" style="width: 40vw; text-align: center; margin-left:30%">
+			<br>
+
+			I will willingly take the frame drop upon first initialization of the display, if the user doesn't do a call to
+			the SDLX_GetDisplay() or SDLX_Start() upon program startup. One way to look at it is that the user wants to display something, which would mean SDL
+			needs or better attempt to be initialized. Another note is that the user can avoid making many function calls by storing the window or renderer
+			themselves, and so this avoids paying the cost of the 'if' statement in a hot loop giving the programmer that flexibility.
+		</p>
+		<p>
+			On a side note, a cool thing you can do in C is using the atexit function. This function will call the provided function
+			when the program terminates, allowing you to clean up the initialization for your user if they forget.
+		</p>
+		<hr>
+		<h2 class="top-sep title">Rendering Pipeline</h2>
+		<p>
+			Let the user call a function to display an image on the screen using a minimal yet powerful structure. The structure
+			has some clear restrictions since it will use SDL_RenderCopyEx() function. The structure needs to know:
+			<ol>
+				<li>What will be displayed</li>
+				<li>Where it will be displayed</li>
+				<li>How it will be displayed (center of rotation, angle of rotation, flip orientation)</li>
+			</ol>
+			These structures can optionally be sent to a queue, or a set of queues if the user creates more than one queue.
+			This would allow the user to order, layer, post-process a class or set of these images as they wish. On this
+			note I would suggest having at least one default queue open to any party to use, a general default queue that
+			anyone can dump these structures to. The program should default to the default option when passed NULL as the
+			destination queue, so that anyone can use it without prior information.
+		</p>
+		<p>
+			Throughout Mympheus you will see that I simply use the default queue, meaning my game classes didn't need
+			to have the destination pointer of the queue they wanted to get dumped into. This however was done by
+			being careful on the ordering of game object updates. Since this is a queue the objects are not drawn
+			when the function is called but rather when the user chooses to flush the queue. I added a boolean that
+			allowed the user to specify if they wanted to reverse the ordering of the queue, which turns out to be pretty
+			useful.
+		</p>
+		<p>
+			The queue can be emptied by flushing the queue and calling SDLX_DrawAnimation() on each of the elements, or emptied
+			by saying that the queue has no elements. This is useful because when rendering in a gameloop you can choose to
+			optionally drop the rendering pipeline. The more important thing is to have a consistent update function,
+			so that your application is consistent among different users, and so occasionally dropping the render is preferable.
+		</p>
+		<p>
+			A few more notes on rendering pipelines. It is useful to have a function that prepares the screen for a new frame and displays
+			the current state of the display. Mine is SDLX_ScreenReset which displays the current screen, then resets the canvas
+			for new additions. Preparing the new canvas involves clearing the entire screen, since we don't have artifacts from the previous frame,
+			and setting a background image if the user had set one. The code below sets a background image.
+			<br>
+			<img src="../resources/meta_mym_title.png" class="img-fluid" style="width: 40vw; text-align: center; margin-left:30%">
+			<br>
+			Although similar to the display code, the background may change throughout the lifetime of the application. This is the reason
+			why it uses an internal function that returns a double pointer. The reason why it is a double pointer is because setting a background
+			image needs to change the address where the background pointer is located at. The other thing to note is that this uses the same
+			structure that game objects use to draw themselves an SDLX_Sprite.
+		</p>
+		<p>
+			Before moving on to SDLX_Sprite, I should say that for most of development of Mympheus that was the case. However near the end
+			I wanted to create a screen shake effect that would be post-process on the entire screen. To do this I changed the drawing context
+			which meant the queue didn't flush to the window but rather elsewhere. I then rotated (shake) that context, swapped the context back
+			to the screen of the player, drew my rotated image with all the flushed images to the screen, then set the context back to mine. The
+			takeaway is that my engine did not interfere with the programers new way of rendering. Instead it used the same functions, flushing the queue,
+			getting the display, attempting to get the background which a normal render would use.
+			<img src="../resources/meta_mym_title.png" class="img-fluid" style="width: 40vw; text-align: center; margin-left:30%">
+			<br>
+		</p>
+		<h2 class="top-sep title">SDLX_Sprite</h2>
+		<hr>
+		<p>
+			A sprite actually has two users, the person making the sprites and the person displaying the sprites. Due to this I wanted the sprite
+			to have an array of images so that animation would be possible. The user that displays the sprite however is removed from this array
+			and is more concerned with just changing the current index of the sprite and hoping it works.
+			<br>
+			<img src="../resources/meta_mym_title.png" class="img-fluid" style="width: 40vw; text-align: center; margin-left:30%">
+			<br>
+			The SDLX_Sprite is the frontend for the person displaying sprites but SDLX_Sprite_Data is what the user that makes the sprites
+			is responsible for correctly setting up. For displaying one wants the control of changing the current index, the destination of the sprite
+			on the screen, the angle of the sprite, setting and controlling the center of rotation, and the flip orientation.
+		</p>
+		<p>
+			This means that the display user just needs to change the sprite_data pointer to entirely change the sprite. Another way of
+			thinking about it is that the members of SDLX_Sprite will be continuously changing but the members of sprite_data shouldn't.
+			SDLX_Sprite_Data is the image, but SDLX_Sprite is the wrapper and the options that the display user has.
+		</p>
+		<p>
+			The sprite data is composed of the texture where the pixels are coming from, and furthermore a rectangle in that texture.
+			An animated sprite however has addition of a cycle or loop. Non-animated sprites can be conveniently thought of as having a cycle
+			of one. The last member in the sprite data is a skip member that allows the sprite to jump to a different spot in the array. This means that
+			you can go from multiple different animations to the something like the idle animation.
+		</p>
+		<p>
+			Typically the display user should be responsible for fetching the new sprite data when key events happen but with the skip
+			variable the sprite data creator can ensure certain sprite animations are followed by others. This removes a lot of checks and functions
+			calls on the display user's side; but it puts more responsibility when creating the sprite data.
+		</p>
+		<h2 class="top-sep title">SDLX_Buttons</h2>
+		<hr>
+		<p>
+			Buttons in their most basic form are event listeners, however users have come to expect certain functionality from buttons.
+			Below is the basic structure a button might have:
+			<br>
+			<img src="../resources/meta_mym_title.png" class="img-fluid" style="width: 40vw; text-align: center; margin-left:30%">
+			<br>
+			The basic buttons needs:
+			<ol>
+				<li>It's own display, the sprite</li>
+				<li>Trigger box, in case it is different from the sprite</li>
+				<li>Trigger function that changes state somewhere based on a condition</li>
+				<li>The location where the state is changed</li>
+				<li>Update function that updates the button itself</li>
+				<li>Disabling boolean to disable the button or enable</li>
+			</ol>
+			However users have come to have certain expectations from buttons which means adding the following:
+			<ol>
+				<li>A way to allow reactive sprite changes</li>
+				<li>Boolean for when the button is 'focused' (hovered or 'active')</li>
+			</ol>
+			Keep in mind that the general button will not necessarily know what it means to be focused. My
+			SDLX library provides mouse hover as default but a programer might want change this, hence adding
+			a function pointer for get_focus_fn is a good idea. I have also found that having two memory addresses
+			for the state change is extremely valuable, heck it might be needed since one can be used for listening
+			to a change in memory to trigger the button and another memory address of where that trigger causes a
+			change of state.
+		</p>
+		<p>
+			The important thing is that a button is a listener for a condition (event) and that causes memory elsewhere
+			to be changed. Originally I had in mind that the an array of memory addresses might be stored, in case the
+			user wanted multiple state changes; this meant I needed a length variable for the pointer array.
+			Although having another member does in a way help, I think user will find it connivent to not have to allocate
+			and array if they just want to know two particular memory addresses. In Mympheus I never passed an array of memory
+			pointers but having the length variable did prove useful as I didn't need to cast when I wanted to store a number
+			for a particular reason.
+		</p>
+		<p>
+			It should be noted that a user can create a structure with multiple or varied types of members and have
+			the button hold that memory address. By doing that the button also has access to all the members stored in
+			a custom structure they choose.
+		</p>
+		<p>
+			I also include a function pointer that triggers only once when the button goes from
+			not being focused to focused; a focus_once_fn that is only run once, the other focus function is
+			continuously called if the button is focused. There is also a priority variable that allows
+			a programmer to reorder or layer the buttons if they put the buttons into a array or queue.
+		</p>
+		<p>
+			Some philosophical concepts that went with making the button is that the focus is an enabler
+			for the trigger function; and if the function is focused it always attempts to trigger. Triggering
+			a button is running a function, and so it 'triggers' a check to attempt to cause memory to change.
+			As such one can have the button always trigger by having a focus function that just returns true.
+			A good analogy for it might be the safety to a weapon; focus takes off the safety but the weapon
+			is now live and continuously trying to trigger. Redundantly I also added a isGloballyActive boolean
+			that means the button is always allowed to trigger. This allows a button to have an invisible sprite
+			and work like an area of effect. One can also have an invisible button listening to key presses
+			that is always focussed and trying to trigger allowing for complex behavior upon key presses.
+		</p>
+		<p>
+			Below is the loop I used for a general button:
+			<br>
+			<img src="../resources/meta_mym_title.png" class="img-fluid" style="width: 40vw; text-align: center; margin-left:30%">
+			<br>
+			But I also include two other button loops that skip steps. One skips the entire focus checking
+			for always triggerable buttons and the other loop skips sprite drawing and focus steps for
+			always active invisible buttons. But a user can completely change the loop they want their button
+			to undergo. It is just connivent to have a general button loop that will be suitable for many task
+			a user might want to preform.
+		</p>
+		<p>
+			When creating these buttons I wanted them to be independent.
+		</p>
+
+
+
+		<hr>
+
+		<img src="../resources/sign.png" class="img-fluid"
+		style="width: 10vw; text-align: center; margin-left:45%; transform: scaleY(-1);">
+
+		<p style="text-align: right; font-size: small;">Website's Source Code <a
+				href="https://github.com/MrColour/mrcolour.github.io" class="pink_link">here</a> </p>
+
+	</div>
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-b5kHyXgcpbZJO/tY9Ul7kGkf1S0CWuKcCD38l8YkeH8z8QjE0GmW1gYU5S9FOnJ0"
+		crossorigin="anonymous"></script>
+
+</body>
+
+</html>
