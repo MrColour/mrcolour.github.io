@@ -306,7 +306,11 @@
 			a user might want to preform.
 		</p>
 		<p>
-			When creating these buttons I wanted them to be independent.
+			When creating these buttons I wanted them to be independent. This meant that each button should
+			transfer control (focus) to others if need be. This is especially true if using arrow keys to
+			navigate buttons in the menu. To make this easy I added left, right, up, and down pointers which
+			could point to buttons themselves (or other entities) to hand them control. Each button is then also
+			responsible to clean up itself when it hands control to another entity.
 		</p>
 
 
