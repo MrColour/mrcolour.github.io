@@ -187,7 +187,7 @@ var Module = typeof Module !== 'undefined' ? Module : {};
     }
   
    }
-   loadPackage({"files": [{"filename": "/assets/pixel_font.ttf", "start": 0, "end": 20508, "audio": 0}, {"filename": "/assets/pacman_extra.png", "start": 20508, "end": 20779, "audio": 0}, {"filename": "/assets/pacman_ghost.png", "start": 20779, "end": 22227, "audio": 0}, {"filename": "/assets/pacman_pacman.png", "start": 22227, "end": 23682, "audio": 0}, {"filename": "/assets/pacman_background.png", "start": 23682, "end": 25763, "audio": 0}, {"filename": "/assets/main_menu.png", "start": 25763, "end": 41708, "audio": 0}, {"filename": "/assets/yoster-island.regular.ttf", "start": 41708, "end": 54156, "audio": 0}], "remote_package_size": 54156, "package_uuid": "ade1ed04-9aaf-48fd-9b85-b3ba0dbdf441"});
+   loadPackage({"files": [{"filename": "/assets/pixel_font.ttf", "start": 0, "end": 20508, "audio": 0}, {"filename": "/assets/pacman_extra.png", "start": 20508, "end": 20779, "audio": 0}, {"filename": "/assets/pacman_ghost.png", "start": 20779, "end": 22227, "audio": 0}, {"filename": "/assets/pacman_pacman.png", "start": 22227, "end": 23682, "audio": 0}, {"filename": "/assets/pacman_background.png", "start": 23682, "end": 25763, "audio": 0}, {"filename": "/assets/main_menu.png", "start": 25763, "end": 41708, "audio": 0}, {"filename": "/assets/yoster-island.regular.ttf", "start": 41708, "end": 54156, "audio": 0}], "remote_package_size": 54156, "package_uuid": "ddc18e20-102b-4359-a7b0-c09b6adc6e88"});
   
   })();
   
