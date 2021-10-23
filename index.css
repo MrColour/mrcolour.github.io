@@ -51,15 +51,36 @@ hr {
 }
 
 .gcard {
-    max-width: 80vh;
-    max-height: auto;
-    text-align: center;
-    margin: auto;
-    margin-bottom: 10px;
-    border-radius: 20px;
-    border-color: rgba(39, 211, 174, 0.473);
-    /* border-color: #85fff5; */
-    padding: 0px 40px 0px 0px;
+	min-width: 400px;
+
+	max-width: 80vh;
+	max-height: auto;
+	text-align: center;
+	margin: auto;
+	margin-bottom: 10px;
+	border-radius: 20px;
+	border-color: rgba(39, 211, 174, 0.473);
+	/* border-color: #85fff5; */
+	padding: 0px 40px 0px 0px;
+}
+
+
+@media screen and (max-width: 600px)
+{
+	.gcard {
+		min-width: 400px;
+
+		max-width: 80vh;
+		max-height: auto;
+		text-align: center;
+		margin: auto;
+		margin-bottom: 10px;
+		border-radius: 20px;
+		border-color: rgba(39, 211, 174, 0.473);
+		/* border-color: #85fff5; */
+		padding: 0px 40px 0px 0px;
+		font-size: 14px;
+	}
 }
 
 .gc-image {
