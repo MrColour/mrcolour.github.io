@@ -46,7 +46,7 @@ hr {
 
 .super-title {
     background: -webkit-linear-gradient(rgb(255, 36, 226), rgb(0, 255, 242));
-    /* -webkit-background-clip: text; */
+    -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
