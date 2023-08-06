@@ -11,16 +11,16 @@ export const E_bar_top_page = ({}) => {
 	return (
 		<_bar>
 			<_container>
-				<_footer_icon href="/react_deploy/" active={path == "react_deploy/home" || path == "react_deploy/" || path == ""}>
+				<_footer_icon href="/" active={path == "#/home" || path == "/" || path == ""}>
 					Home
 				</_footer_icon>
-				<_footer_icon href="/react_deploy/#/about" active={path == "#/about"}>
+				<_footer_icon href="/#/about" active={path == "#/about"}>
 					About
 				</_footer_icon>
-				<_footer_icon href="/react_deploy/#/resume" active={path == "#/resume"}>
+				<_footer_icon href="/#/resume" active={path == "#/resume"}>
 					Resume
 				</_footer_icon>
-				<_footer_icon href="/react_deploy/#/contact" active={path == "#/contact"}>
+				<_footer_icon href="/#/contact" active={path == "#/contact"}>
 					Contact
 				</_footer_icon>
 			</_container>

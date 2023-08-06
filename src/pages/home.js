@@ -15,7 +15,7 @@ import {
 	style_default_margin_spacer,
 } from "../default_styles";
 
-const modelPath = "/react_deploy/rhetorician/scene.gltf";
+const modelPath = "/rhetorician/scene.gltf";
 
 export const E_page_home = ({}) => {
 	const theme = useTheme();
