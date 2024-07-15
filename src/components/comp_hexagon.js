@@ -24,7 +24,7 @@ export const E_hexagon_image = ({img, id, parent_size, url}) => {
 						<path stroke="none" fill={"url(#" + id + "img6)"} d="M110 2.618802153517a16 16 0 0 1 16 0l87.923048454133 50.762395692966a16 16 0 0 1 8 13.856406460551l0 101.52479138593a16 16 0 0 1 -8 13.856406460551l-87.923048454133 50.762395692966a16 16 0 0 1 -16 0l-87.923048454133 -50.762395692966a16 16 0 0 1 -8 -13.856406460551l1.6169445592635e-13 -101.52479138593a16 16 0 0 1 8 -13.856406460551"></path>
 
 						<defs>
-							<pattern id={id + "img6"} patternUnits="userSpaceOnUse" width="256" height="256">
+							<pattern id={id + "img6"} patternUnits="userSpaceOnUse" width="256" height="256" x="-10" y ="-10">
 								<_hexagon_svg href={img} hover={isHovered} width="256"/>
 								<_glass href={glass} hover={isHovered} x="-80" y="-35" width="300" height="300" transform="rotate(-20 0 0)"/>
 							</pattern>

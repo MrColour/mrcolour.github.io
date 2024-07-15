@@ -72,7 +72,7 @@ export const style_text_link = css`
 	background-clip: text;
 	-webkit-background-clip: text;
 	-webkit-text-fill-color: transparent;
-	filter: drop-shadow(-1px 1px .5px rgba(0, 0, 0, 0.3));
+	filter: drop-shadow(-1px 1px 1px rgba(0, 0, 0, 0.4));
 
 	&:hover {
 		background: ${(props) => props.theme.style_gradient_pink};
@@ -102,6 +102,7 @@ export const S_board_title_underline = styled.div`
 
 export const S_board_text = styled.div`
 	${style_board_text}
+	white-space: pre-line;
 `;
 
 export const S_paragraph_compact = styled.p`

@@ -7,6 +7,7 @@ import icon_flappy from "../assets/icon_flappy.png";
 import icon_mym from "../assets/icon_mym.png";
 import icon_pac from "../assets/icon_pac.png";
 import icon_tictac from "../assets/icon_tictac.png";
+import icon_taptiles from "../assets/icon_taptiles.png";
 
 import { E_hexagon_image } from "../components/comp_hexagon";
 
@@ -34,8 +35,8 @@ export const E_strip_app_tiles = ({}) => {
 
 	return (
 		<_strip>
-			Built from scratch
-			<S_board_title_underline>Programs: </S_board_title_underline>
+			Showcase of Self-Built
+			<S_board_title_underline>Applications: </S_board_title_underline>
 			<_hexagon_grid id="hexagon_grid">
 				<E_hexagon_image id={0} parent_size={width} img={icon_2048}		 url={"#/2048"}/>
 				<E_hexagon_image id={1} parent_size={width} img={icon_chess}	 url={"#/chess"}/>
@@ -43,6 +44,7 @@ export const E_strip_app_tiles = ({}) => {
 				<E_hexagon_image id={4} parent_size={width} img={icon_mym}		 url={"#/mympheus"}/>
 				<E_hexagon_image id={5} parent_size={width} img={icon_pac}		 url={"#/pacman"}/>
 				<E_hexagon_image id={6} parent_size={width} img={icon_tictac}	 url={"#/tic_tac_toe"}/>
+				<E_hexagon_image id={7} parent_size={width} img={icon_taptiles}	 url={"#/taptiles"}/>
 			</_hexagon_grid>
 			<S_board_title_underline></S_board_title_underline>
 		</_strip>

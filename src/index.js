@@ -61,6 +61,7 @@ rootElement.render(
 				<Route path="/mympheus"		element={<E_page_app id={4} app_data={app_data['mympheus']} />} />
 				<Route path="/pacman"		element={<E_page_app id={5} app_data={app_data['pacman']} />} />
 				<Route path="/tic_tac_toe"	element={<E_page_app id={6} app_data={app_data['tic_tac_toe']} />} />
+				<Route path="/taptiles"	element={<E_page_app id={7} app_data={app_data['taptiles']} />} />
 
 				<Route path="/*" 		element={<E_page_not_found />} />
 			</Routes>

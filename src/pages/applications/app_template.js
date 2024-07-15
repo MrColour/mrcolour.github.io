@@ -34,6 +34,7 @@ export const E_page_app = ({app_data, id}) => {
 			if (document.getElementsByClassName("canvas5")[0] != undefined && id != 5) {document.getElementsByClassName("canvas5")[0].remove();}
 			if (document.getElementsByClassName("canvas6")[0] != undefined && id != 6) {document.getElementsByClassName("canvas6")[0].remove();}
 			if (document.getElementsByClassName("canvas7")[0] != undefined && id != 7) {document.getElementsByClassName("canvas7")[0].remove();}
+			if (document.getElementsByClassName("canvas8")[0] != undefined && id != 8) {document.getElementsByClassName("canvas8")[0].remove();}
 		}
 
 	  });
@@ -60,9 +61,13 @@ export const E_page_app = ({app_data, id}) => {
 			<_container id={"canvas"} className={"canvas" + id} ratios={app_data['aspect_ratio']}></_container>
 		</div>
 		</_board_space>
-		<S_board_title_underline>Source Code:</S_board_title_underline>
-		<_link_font href={app_data['url']} target="_blank">{app_data['url']}</_link_font>
-		<br></br>
+		{ app_data['url'] != undefined &&
+			<>
+				<S_board_title_underline>Source Code:</S_board_title_underline>
+				<_link_font href={app_data['url']} target="_blank">{app_data['url']}</_link_font>
+				<br></br>
+			</>
+		}
 		<E_strip_app_tiles></E_strip_app_tiles>
 		</E_page>
 	);

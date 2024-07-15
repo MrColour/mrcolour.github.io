@@ -10,7 +10,7 @@ export const E_bar_bottom_page = ({}) => {
 		<_footer>
 			<_left_footer_section>
 				<_text_row>Kevin Mira ©2023</_text_row>
-				<_text_row>Source Code <_link_font href="https://github.com/MrColour/react_deploy" target="_blank">here</_link_font></_text_row>
+				<_text_row>Source Code <_link_font href="https://github.com/MrColour/mrcolour.github.io" target="_blank">here</_link_font></_text_row>
 			</_left_footer_section>
 
 			<_right_footer_section>

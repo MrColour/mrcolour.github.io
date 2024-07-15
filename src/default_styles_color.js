@@ -15,12 +15,12 @@ export const style_alabaster = {
 
 	style_shadow_color: "#27272759",
 
-	style_gradient_multicolor: "linear-gradient(10deg, #684ba7, #147383, #0e844b)",
+	style_gradient_multicolor: "linear-gradient(10deg, #5b62e4, #20ecc0)",
 	get style_gradient_blue() {
 		return `linear-gradient(158deg, ${this.style_secondary_color}c0 0%, #21d7cbc0 103%)`;
 	},
 	get style_gradient_pink() {
-		return `linear-gradient(10deg, #4b3b70, #10efb4)`;
+		return `linear-gradient(10deg, #8283d4, #69fed6)`;
 	},
 };
 

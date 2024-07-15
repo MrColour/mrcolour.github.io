@@ -33,7 +33,7 @@ export const E_page_about = ({}) => {
 				<_board_space>
 					<S_board_text style={{marginTop:"5px"}}><_line> Github: </_line><S_text_link href="https://github.com/MrColour" target="_blank">MrColour</S_text_link></S_board_text>
 					<S_board_text style={{marginTop:"5px"}}><_line>Player Name:</_line> Kevin Mira </S_board_text>
-					<S_board_text style={{marginTop:"5px"}}><_line>Location:</_line> Hayward, CA </S_board_text>
+					<S_board_text style={{marginTop:"5px"}}><_line>Location:</_line> Los Angeles, CA </S_board_text>
 					<S_board_text style={{marginTop:"5px"}}><_line>LinkedIn:</_line> <S_text_link href="https://www.linkedin.com/in/kevin-dev/" target="_blank">kevin-dev</S_text_link></S_board_text>
 				</_board_space>
 				<S_board_title_underline></S_board_title_underline>
@@ -62,15 +62,19 @@ export const E_page_about = ({}) => {
 						, <S_text_link href="https://www.hackerrank.com/kmira?hr_r=1" target="blank">HackerRank</S_text_link>
 						, Project Euler, Codewars</li>
 					<li>Game Development in C from scratch</li>
+					<br></br>
 					<li>IT and hardware consultant</li>
 				</_card>
 				<_card>
 					<_card_tittle>2018-2020 (<S_text_link href="https://42.fr/en/homepage/" target="blank">42 Silicon Valley</S_text_link>)</_card_tittle>
 					<br></br>
-					<li>Hands-on learning environment where success is tied with peer reviewed software projects</li>
+					<li>Master's level Computer Science Course</li>
+					<li>Top Student (Champion Title, First on 2020 Leaderboards, Max Grades on Projects)</li>
 					<li>Minimum requirements included 40 hours/week of C coding</li>
+					<br></br>
 					<li>Tech Conference Volunteer (AngelHack, Bixby, Google, Oracle)</li>
 					<li>Audio/Visual Technician</li>
+					<br></br>
 					<li><S_text_link href="https://github.com/42kmira" target="blank">https://github.com/42kmira</S_text_link></li>
 				</_card>
 				<_card>
@@ -79,9 +83,10 @@ export const E_page_about = ({}) => {
 					<li>Electromagnetism</li>
 					<li>Newtonian Physics</li>
 					<li>Discrete Math (Lambda Calculus)</li>
-					<li>Bachelor's Degree in Liberal Arts: double major in philosophy and history of science, double minor in classical studies and comparative literature</li>
+					<li>General Relativity and Quantum Mechanics</li>
+					<li>Bachelor's Degree in Liberal Arts: double major in philosophy and history of science</li>
+					<br></br>
 					<li>Audio/Visual Technician</li>
-					<li>Python Scripts and ML starter projects</li>
 				</_card>
 				<_card>
 					<_card_tittle>2012-2014 (High School)</_card_tittle>
@@ -90,7 +95,8 @@ export const E_page_about = ({}) => {
 					<li>AP Calculus AB</li>
 					<li>AP Physics</li>
 					<li>Highschool Computer Science II (Java)</li>
-					<li>plus 8 other AP classes</li>
+					<br></br>
+					<li>plus 8 other AP classes (Biology, Psychology, Art History, Environmental Science, Spanish, US History, Government, English, Literature)</li>
 				</_card>
 		</E_page>
 	);
@@ -104,6 +110,7 @@ const _line = styled.b`
 const _card = styled.div`
 	${style_inset_board}
 	${style_default_margin_spacer}
+	aspect-ratio: 12/4;
 
 	width: 80%;
 	flex-direction: column;
