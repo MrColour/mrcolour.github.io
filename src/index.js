@@ -34,7 +34,7 @@ export const _root = ({children}) => {
 	// const [theme, set_theme] = useState({ ...style_dark });
 
 	change_theme(theme, set_theme, style_alabaster);
-	change_theme(theme, set_theme, style_dark);
+	// change_theme(theme, set_theme, style_dark);
 
 	return (
 		<div>
