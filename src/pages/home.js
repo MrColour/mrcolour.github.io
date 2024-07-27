@@ -30,7 +30,7 @@ export const E_page_home = ({}) => {
 						<_bold_text>Kevin Mira</_bold_text>
 						<_right_side>
 							<S_board_text>Software Developer</S_board_text>
-							<S_board_title>You don't want experience. You want results. Trust me.</S_board_title>
+							<S_board_title>"I was faster than the others only because they hurried to write it twice."</S_board_title>
 						</_right_side>
 					</_container_inset>
 
@@ -44,6 +44,9 @@ export const E_page_home = ({}) => {
 								</p>
 								<p>
 									τέχνη: art, craft, workmanship, trade, artfulness, metier
+								</p>
+								<p>
+								"Artisans of an earlier age were proud to sign their work. Your <S_text_link href="https://github.com/MrColour/mrcolour.github.io">signature</S_text_link> should come to be recognized as an indicator of quality."
 								</p>
 								<p>
 									<S_text_link href="/#/about">Learn about me</S_text_link>.
