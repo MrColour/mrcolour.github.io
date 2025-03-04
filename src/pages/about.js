@@ -39,7 +39,7 @@ export const E_page_about = ({}) => {
 				<S_board_title_underline></S_board_title_underline>
 
 				<_card>
-					<_card_tittle>2021-2023 (<S_text_link href="https://www.sugargenix.com" target="blank">Sugargenix</S_text_link>)</_card_tittle>
+					<_card_tittle>2022-2025 (<S_text_link href="https://www.sugargenix.com" target="blank">Sugargenix</S_text_link>)</_card_tittle>
 					<br></br>
 					<li>Game developer: mechanics, build systems, rendering pipeline, engine development</li>
 					<li>Frontend React Developer and Designer</li>

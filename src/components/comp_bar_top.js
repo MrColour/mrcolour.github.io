@@ -17,9 +17,6 @@ export const E_bar_top_page = ({}) => {
 				<_footer_icon href="/#/about" active={path == "#/about"}>
 					About
 				</_footer_icon>
-				<_footer_icon href="/#/resume" active={path == "#/resume"}>
-					Resume
-				</_footer_icon>
 				<_footer_icon href="/#/contact" active={path == "#/contact"}>
 					Contact
 				</_footer_icon>

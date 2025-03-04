@@ -17,13 +17,12 @@ const dataText = [
 Sincerely,
 Kevin Mira`,
 
-`Experienced self-taught Software Engineer with 5 years of coding expertise, specializing in video game, website, and dev tool development. Proficient in a wide range of technologies, ranging from low-level x86 assembly to modern frameworks like React, with a particular focus on the C programming language.
+`Experienced self-taught Software Engineer with 7 years of coding expertise, specializing in SDL Libraries, React, and dev tool development. Proficient in a wide range of technologies, ranging from frameworks like React or low level code, with a particular focus on the C programming language.
 
 I fully designed and programmed in React the website you are on.
 
 Below are ways in which you can contact me:
-Tel:    +1 (505) 690-1646
-Email: kecolour@gmail.com
+Email: kmira@lookup.email
 Or the other form on this page?
 
 Cheers,
@@ -86,7 +85,7 @@ export const E_page_contact = ({}) => {
 
 				<_form_container>
 					<_form onMouseDown={() => increase_speed()}>
-						<_input name="Email" id="email" placeholder="kecolour@gmail.com" disabled></_input>
+						<_input name="Email" id="email" placeholder="kmira@lookup.email" disabled></_input>
 								<_text_input type="text" name="message" rows="15" disabled value={_my_email} style={{backgroundColor:background}}></_text_input>
 					</_form>
 				</_form_container>

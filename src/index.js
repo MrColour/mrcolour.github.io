@@ -6,7 +6,6 @@ import WebFont from "webfontloader";
 
 import { E_page_home } from "./pages/home";
 import { E_page_about } from "./pages/about";
-import { E_page_resume } from "./pages/resume";
 import { E_page_contact } from "./pages/contact";
 import { E_page_app } from "./pages/applications/app_template";
 import { app_data } from "./pages/applications/app_data";
@@ -52,7 +51,6 @@ rootElement.render(
 				<Route path="/"			element={<E_page_home />} />
 				<Route path="/home"		element={<E_page_home />} />
 				<Route path="/about"	element={<E_page_about />} />
-				<Route path="/resume"	element={<E_page_resume />} />
 				<Route path="/contact"	element={<E_page_contact />} />
 
 				<Route path="/2048"			element={<E_page_app id={0} app_data={app_data['a2048']} />} />
